@@ -7,7 +7,6 @@
   <body>
   <h1>WELCOME TO J2EE</h1>
 
-  <a href="login.jsp">login</a>
-
+  <a href="frmlogin.jsp">login</a>
   </body>
 </html>

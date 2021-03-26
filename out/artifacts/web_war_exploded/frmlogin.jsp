@@ -1,3 +1,9 @@
+<%
+  String msg="";
+  if(request.getParameter("msg")!=null && request.getParameter("msg").equals("error")) {
+    msg = "Invalid User/Password Please retry again";
+  }
+%>
 <html lang="en">
 <head>
   <!-- Required meta tags -->
@@ -46,11 +52,12 @@
       <div class="col-md-8">
         <div class="card">
           <div class="card-header">Register</div>
+          <%=msg%>
           <div class="card-body">
             <form method="post" action="/login">
               <div class="form-group row">
                 <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
-                <div class="col-md-6">p
+                <div class="col-md-6">
                   <input type="text" id="email_address" class="form-control" name="email-address" required autofocus>
                 </div>
               </div>
